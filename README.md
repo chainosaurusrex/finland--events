@@ -2642,7 +2642,7 @@ progress
 
 
 
-eevent = {
+event = {
 id = 654948 
 random = no
 country = FIN
@@ -2661,7 +2661,60 @@ command = { type = dissent value = -5 }
 action_b = {
 ai_chance = 60
 name = "Contact the Germans"
-command = { type = trigger which = 654948 }
+command = { type = trigger which = 654949 }
+}
+}
+
+event = { 
+id = 654949
+random = no
+country = GER
+style = 2 
+
+name = "War in the north!"
+desc = "Finland has called for our aid against the Syndicalist Scandinavians who have attacked them over Aland islands. While the conflict is local it could be an oppertunity for Syndicalism to spread."
+
+action_a = {
+ai_chance = 60
+name = "Threaten Scandinavia"
+command = { type = trigger which = 654950 }
+command = { type = trigger which = 654951 }
+command = { type = relation which = FIN value = 120 }
+command = { type = relation which = SCA value = -200 }
+}
+
+action_b = { 
+ai_chance = 20
+name = "Send Troops"
+command = { type = trigger which = ###### }
+command = { type = manpower value = -70 }###########################################################################################
+command = { type = supplies value = -300 }
+command = { type = realtion which = FIN value = 80 }
+command = { type = relation which = SCA value = -120 }
+}
+
+action_c = {
+ai_chance = 10
+name = "Send materical support"
+command = { type = trigger which = ###### }
+command = { type = supplies value = -300 }
+command = { type = relation which = FIN value = 40 }
+command = { type = relation which = SCA value = -40 }
+}
+
+action_c = {
+ai_chance = 10
+name = "We dont care about Finland"
+command = { type = trigger which = ###### }
+command = { type = relation which = SCA value = 50 }
+command = { type = relation which = Fin value = -100 }
+command = { type = dissent value = 5 }
+}
+}
+
+event = {
+id = 654950
+
 
 
 
