@@ -2678,7 +2678,7 @@ action_a = {
 ai_chance = 60
 name = "Threaten Scandinavia"
 command = { type = trigger which = 654950 }
-command = { type = trigger which = 654951 }
+command = { type = trigger which = ###### }
 command = { type = relation which = FIN value = 120 }
 command = { type = relation which = SCA value = -200 }
 }
@@ -2686,7 +2686,7 @@ command = { type = relation which = SCA value = -200 }
 action_b = { 
 ai_chance = 20
 name = "Send Troops"
-command = { type = trigger which = ###### }
+command = { type = trigger which = 654951 }
 command = { type = manpower value = -70 }###########################################################################################
 command = { type = supplies value = -300 }
 command = { type = realtion which = FIN value = 80 }
@@ -2696,7 +2696,7 @@ command = { type = relation which = SCA value = -120 }
 action_c = {
 ai_chance = 10
 name = "Send materical support"
-command = { type = trigger which = ###### }
+command = { type = trigger which = 654952 }
 command = { type = supplies value = -300 }
 command = { type = relation which = FIN value = 40 }
 command = { type = relation which = SCA value = -40 }
@@ -2705,7 +2705,7 @@ command = { type = relation which = SCA value = -40 }
 action_c = {
 ai_chance = 10
 name = "We dont care about Finland"
-command = { type = trigger which = ###### }
+command = { type = trigger which = 654953 }
 command = { type = relation which = SCA value = 50 }
 command = { type = relation which = Fin value = -100 }
 command = { type = dissent value = 5 }
@@ -2714,6 +2714,31 @@ command = { type = dissent value = 5 }
 
 event = {
 id = 654950
+random = no
+country = FIN
+style = 2 
+
+name = "Germany intervenes"
+desc = "The mighty German Empire has threatened the syndicalists with war if they do not back down, surely this will stop them."
+
+action_a = {
+name = "Hurrah!"
+command = { type = dissent value = -2 }
+}
+}
+
+event = {
+id = 654951
+random = no
+country = FIN
+style = 2
+
+name = "German aid
+desc = "The mighty German Empire has responded to our calls for aid by sending us troops and weapons."
+
+action_a = {
+name = "We will surely win"
+command = 
 
 
 
